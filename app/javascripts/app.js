@@ -18,6 +18,7 @@ var accounts;
 var account;
 
 window.App = {
+
   start: function() {
     var self = this;
 

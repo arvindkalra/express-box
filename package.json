@@ -30,6 +30,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "nodemon": "^1.14.12"
   }
