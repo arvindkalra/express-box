@@ -33,7 +33,6 @@ module.exports = {
     // Bootstrap the MetaCoin abstraction for Use.
     MetaCoin.setProvider(self.web3.currentProvider);
 
-    console.log(account);
     var meta;
     MetaCoin.deployed().then(function(instance) {
       meta = instance;
@@ -45,4 +44,23 @@ module.exports = {
         callback("Error 404");
     });
   },
+  sendCoin: function(amount, sender, receiver, callback) {
+    var self = this;
+
+    // Bootstrap the MetaCoin abstraction for Use.
+    MetaCoin.setProvider(self.web3.currentProvider);
+
+    var meta;
+    MetaCoin.deployed().then(function(instance) {
+      meta = instance;
+      return meta.sendCoin(receiver, amount, {from: sender});
+    }).then(function() {
+      self.refreshBalance(sender, function (answer) {
+        callback(answer);
+      });
+    }).catch(function(e) {
+      console.log(e);
+      callback("ERROR 404");
+    });
+  }
 }

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000 || process.env.PORT;
+const port = 3000 || process.env.PORT;
 const Web3 = require('web3');
 const truffle_connect = require('./Connection/app.js');
 const bodyParser = require('body-parser');
@@ -20,10 +20,23 @@ app.get('/getAccounts', (req, res) => {
 
 app.post('/getBalance', (req, res) => {
   console.log("**** GET /getBalance ****");
-  // console.log(req.body);
+  console.log(req.body);
   let currentAcount = req.body.account;
   truffle_connect.refreshBalance(currentAcount, (answer) => {
       res.send(answer);
+  });
+});
+
+app.post('/sendCoin', (req, res) => {
+  console.log("**** GET /sendCoin ****");
+  console.log(req.body);
+
+  let amount = req.body.amount;
+  let sender = req.body.sender;
+  let receiver = req.body.receiver;
+
+  truffle_connect.sendCoin(amount, sender, receiver, (balance) => {
+    res.send(balance);
   });
 });
 
