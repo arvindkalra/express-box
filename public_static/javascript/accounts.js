@@ -26,6 +26,7 @@ $(document).ready(function () {
     let receiver = $('#receiver').val();
     $.post('/sendCoin', {amount : amount, sender : selectedAccount, receiver : receiver}, function (response) {
       $('#balance').text(response);
+      $('#status').text("Sent!!");
     })
   });
 })
