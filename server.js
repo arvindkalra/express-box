@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use('/', express.static('public_static'));
+
 app.get('/getAccounts', (req, res) => {
   console.log("**** GET /getAccounts ****");
   truffle_connect.start(function (answer) {
