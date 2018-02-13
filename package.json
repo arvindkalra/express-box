@@ -1,11 +1,11 @@
 {
-  "name": "truffle-init-webpack",
+  "name": "Express-Box",
   "version": "0.0.2",
-  "description": "Frontend example using truffle v3",
+  "description": "Make API-Endpoints for Ethereum BlockChain",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "Douglas von Kohorn",
+  "author": "Arvind & Pranav",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.22.2",
