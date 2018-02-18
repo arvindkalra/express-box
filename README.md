@@ -7,11 +7,13 @@ Development. This personalised blockchain is made in the
 GanacheCLI.
 
 The Smart Contract Written in solidity language
-is deployed on this blockchain. Smart Contract is
+is deployed on this Ethereum Blockchain. Smart Contract is
 Immutable hence, once deployed it can't be changed.
 
+A truffle box to serve as the foundation of any Truffle and Express.js dApp. 
+
 This Box Uses NodeJS(Express JS) to provide API 
-endpoints to the blockchain smart contract so that this
+endpoints to the Ethereum Blockchain smart contract so that this
 smart contract can be used in Android Apps as well.
 
 **Pre-Requisites**
@@ -19,3 +21,12 @@ smart contract can be used in Android Apps as well.
 2. [Yarn](https://stackoverflow.com/questions/42606941/install-yarn-ubuntu-16-04-linux-mint-18-1)
 3. [GanacheCLI](https://github.com/trufflesuite/ganache-cli)
 4. [Truffle](https://github.com/trufflesuite/truffle)
+
+**Installation**
+1. In one terminal window run the Launch GanacheCLI `ganache-cli <options>`
+2. In another terminal window go the project repositary, now, You need to compile the smart contracts written in the contracts folder. For this, `truffle compile`
+3. You can see that a new build folder has been created in the root directory which contains the compiled contracts.
+4. Now these contracts need to be deployed on the Blockchain. For this, `truffle migrate`.
+5. The Node depedencies need to be installed. For this, `yarn install`.
+6. To run the Express server `yarn start`.
+7. In the browser window open `http://localhost:3000/`.
