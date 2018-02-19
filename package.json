@@ -4,7 +4,7 @@
   "description": "Make API-Endpoints for Ethereum BlockChain",
   "scripts": {
     "start": "nodemon server.js",
-    "test" : "truffle test test/*"
+    "test": "truffle test test/*"
   },
   "author": "Arvind & Pranav",
   "license": "MIT",
