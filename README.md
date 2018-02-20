@@ -28,6 +28,5 @@ smart contract can be used in Android Apps as well.
 3. In another terminal window go the project repositary, now, You need to compile the smart contracts written in the contracts folder. For this, `truffle compile`
 4. You can see that a new build folder has been created in the root directory which contains the compiled contracts.
 5. Now these contracts need to be deployed on the Blockchain. For this, `truffle migrate`.
-6. The Node depedencies need to be installed. For this, `yarn install`.
 7. To run the Express server `yarn start`.
 8. In the browser window open `http://localhost:3000/`.
