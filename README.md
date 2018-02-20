@@ -24,7 +24,7 @@ smart contract can be used in Android Apps as well.
 
 **Installation**
 1. In one terminal window run the Launch GanacheCLI `ganache-cli <options>`
-2. Run 'npm install' or 'yarn install' to install all the node modules
+2. Run `npm install` or `yarn install` to install all the node modules
 3. In another terminal window go the project repositary, now, You need to compile the smart contracts written in the contracts folder. For this, `truffle compile`
 4. You can see that a new build folder has been created in the root directory which contains the compiled contracts.
 5. Now these contracts need to be deployed on the Blockchain. For this, `truffle migrate`.
