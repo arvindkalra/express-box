@@ -33,3 +33,7 @@ smart contract can be used in Android Apps as well.
   * If you changed the network_id to " * " in Step 1, you can run `truffle migrate`
 7. To run the Express server `yarn start` or `npm server.js`, if you have nodemon installed.
 8. In the browser window open `http://localhost:3000/`.
+
+**Collaborators**
+1. [ARVIND KALRA](https://github.com/arvindkalra)
+2. [PRANAV SINGHAL](https://github.com/pranav-singhal)
