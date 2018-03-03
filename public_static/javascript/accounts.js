@@ -16,7 +16,17 @@ $(document).ready(function () {
       $('.select').removeClass("active");
       $('.send').addClass("active");
       $('#account').text(selectedAccount);
-      $('#balance').text(response);
+      $('#balance').text(response[0]);
+      var current_account_index = response[1].indexOf(selectedAccount);
+      response[1].splice(current_account_index,1); //remove the selected account from the list of accounts you can send to.
+      $('#all-accounts').addClass("active");
+      var list= $('#all-accounts > ol');
+      for(let i=0;i< response[1].length;i++){
+        li="<li>"+response[1][i]+"</li>";
+        list.append(li)
+      }
+
+
     })
   })
 

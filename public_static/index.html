@@ -18,11 +18,11 @@
             width: 20%;
             margin-top: 20px;
         }
-        .select, .send{
+        .select, .send, #all-accounts{
             display: none;
         }
         .active{
-            display: block;
+            display: block !important;
         }
     </style>
 </head>
@@ -55,6 +55,13 @@
         <span id="status"></span>
         <br>
         <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+    </div>
+    <div id="all-accounts">
+      <h3>Accounts on the chain you can send MetaCoin to:</h3>
+      <ol>
+
+      </ol>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="javascript/accounts.js"></script>
