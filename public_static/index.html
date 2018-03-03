@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <title>MetaCoin - Truffle Webpack Demo w/ Frontend & Express</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap css-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="stylesheets/app.css" rel="stylesheet">
+
     <style>
         #options{
             height: 40px;
@@ -15,48 +22,81 @@
             font-size: 1.7em;
         }
         #submit{
-            width: 20%;
-            margin-top: 20px;
+          width: 20%;
+          display: block;
+          margin: 20px auto;
         }
-        .select, .send{
+        .select, .send, #all-accounts{
             display: none;
         }
         .active{
-            display: block;
+            display: block !important;
         }
     </style>
 </head>
 <body>
-    <div class="select active">
-        <h1>MetaCoin</h1>
-        <h2>Example Truffle DApp</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="select active">
+            <h1>MetaCoin</h1>
+            <h2>Example Truffle DApp</h2>
+            <br>
+            <h3 id="selecttag">Select Your Account</h3>
+            <select id="options" name="cars" class="form-control">
+            </select>
+            <button id="submit" class="btn btn-primary">SUBMIT</button>
+            <div class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</div>
 
-        <br>
-        <h3 id="selecttag">Select Your Account</h3>
-        <select id="options" name="cars">
-            <!---->
-        </select>
-        <button id="submit">SUBMIT</button>
-        <div class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</div>
+        </div>
+      </div>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="send">
+            <h1>MetaCoin</h1>
+            <h2>Example Truffle Dapp</h2>
+            <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
+            <h3>Your Account <span class="black" id="account"></span></h3>
+
+            <br>
+            <h1>Send MetaCoin</h1>
+            <div class="row">
+              <form>
+                <div class="col-md-12">
+                <br><label for="amount">Amount:</label><input type="number" id="amount" class="form-control" placeholder="e.g., 95" required></input>
+                <br><label for="receiver">To Address:</label><input type="text" id="receiver" class="form-control" placeholder="copy and paste from the list of active accounts below" required></input>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                  <br><br><button class="btn btn-primary" id="send">Send MetaCoin</button>
+                </div>
+
+
+
+                <br><br>
+                <span id="status"></span>
+              </form>
+            </div>
+
+
+            <br>
+            <div class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</div>
+        </div>
+      </div>
+      <div class="col-md-10 col-md-offset-1">
+        <div id="all-accounts">
+          <h3>Accounts on the chain you can send MetaCoin to:</h3>
+          <ol>
+
+          </ol>
+        </div>
+      </div>
 
     </div>
-    <div class="send">
-        <h1>MetaCoin</h1>
-        <h2>Example Truffle Dapp</h2>
-        <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
-        <h3>Your Account <span class="black" id="account"></span></h3>
 
-        <br>
-        <h1>Send MetaCoin</h1>
-        <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
-        <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
-        <br><br><button id="send">Send MetaCoin</button>
-        <br><br>
-        <span id="status"></span>
-        <br>
-        <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+  </div>
+
+
     <script src="javascript/accounts.js"></script>
 </body>
 </html>
