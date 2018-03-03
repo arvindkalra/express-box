@@ -1,6 +1,6 @@
 body {
-  margin-left: 25%;
-  margin-right: 25%;
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
   margin-top: 10%;
   font-family: "Open Sans", sans-serif;
 }
@@ -22,10 +22,12 @@ button {
 }
 
 h1, h2 {
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: middle;
   margin-top: 0px;
   margin-bottom: 10px;
+  text-align:center;
+
 }
 
 h2 {
@@ -49,4 +51,12 @@ h3 {
 
 .hint {
   color: #666;
+  text-align: center;
+
+}
+
+button#send{
+  display: block;
+    margin: 0 auto;
+
 }
