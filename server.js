@@ -24,14 +24,12 @@ app.post('/getBalance', (req, res) => {
   console.log("**** GET /getBalance ****");
   console.log(req.body);
   let currentAcount = req.body.account;
-  var answer1;
-  var answer2;
+
   truffle_connect.refreshBalance(currentAcount, (answer) => {
-    var account_balance = answer;
-    console.log(answer1);
+    let account_balance = answer;
     truffle_connect.start(function(answer){
       // get list of all accounts and send it along with the response
-      var all_accounts = answer;
+      let all_accounts = answer;
       response = [account_balance, all_accounts]
       res.send(response);
     });
