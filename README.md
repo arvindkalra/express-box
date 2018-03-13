@@ -23,16 +23,28 @@ smart contract can be used in Android Apps as well.
 4. [Truffle](https://github.com/trufflesuite/truffle)
 
 **Installation**
-1. In one terminal window run the Launch GanacheCLI `ganache-cli -i 666`
+1. Install Truffle and Ganache CLI globally. If you prefer, the graphical version of Ganache works as well!
+```
+npm install -g truffle
+npm install -g ganache-cli
+```
+
+2. Download the box. This also takes care of installing the necessary dependencies.
+
+```
+truffle unbox arvindkalra/express-box
+
+```
+3. In one terminal window run the Launch GanacheCLI `ganache-cli -i 666`
   * To prevent creating a new network id everytime, we have set a default network key in the truffle config file.
   * To change that, simply go to the 'truffle.js' file and change the network_id from '666' to " * " and to Launch GanacheCLI `ganache-cli`.
-2. Run `npm install` or `yarn install` to install all the node modules
-3. In another terminal window go the to project repositary, now, You need to compile the smart contracts written in the `/contracts` folder. For this, `truffle compile`
-4. You can see that a new `/build` folder has been created in the root directory which contains the compiled contracts.
-5. Now these contracts need to be deployed on the Blockchain. For this, `truffle migrate --network development`.
+4. Run `npm install` or `yarn install` to install all the node modules
+5. In another terminal window go the to project repositary, now, You need to compile the smart contracts written in the `/contracts` folder. For this, `truffle compile`
+6. You can see that a new `/build` folder has been created in the root directory which contains the compiled contracts.
+7. Now these contracts need to be deployed on the Blockchain. For this, `truffle migrate --network development`.
   * If you changed the network_id to " * " in Step 1, you can run `truffle migrate`
-7. To run the Express server `yarn start` or `npm server.js`, if you have nodemon installed.
-8. In the browser window open `http://localhost:3000/`.
+8. To run the Express server `yarn start` or `npm server.js`, if you have nodemon installed.
+9. In the browser window open `http://localhost:3000/`.
 
 **Collaborators**
 1. [ARVIND KALRA](https://github.com/arvindkalra)
