@@ -7,7 +7,7 @@
     "Compile": "truffle compile",
     "Migrate": "truffle migrate --network development",
     "Ganache": "ganache-cli -i 666",
-    "Express": "nodemon server.js"
+    "Express": "npm start"
   },
   "hooks": {
   "post-unpack": "npm install"
