@@ -17,8 +17,8 @@ endpoints to the Ethereum Blockchain smart contract so that this
 smart contract can be used in Android Apps as well.
 
 **Pre-Requisites**
-1. [NodeJS](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
-2. [Yarn](https://stackoverflow.com/questions/42606941/install-yarn-ubuntu-16-04-linux-mint-18-1)
+1. [NodeJS](https://nodejs.org/en/download/)
+2. A Package Manager for NodeJS, such as [Yarn](https://yarnpkg.com/getting-started/install) or npm (comes pre-installed with NodeJS)
 3. [GanacheCLI](https://github.com/trufflesuite/ganache-cli)
 4. [Truffle](https://github.com/trufflesuite/truffle)
 
